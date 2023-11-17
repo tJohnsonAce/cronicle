@@ -10,23 +10,38 @@ export default function Home() {
     event.preventDefault();
     setMessage(""); // Reset message
 
-    const waitlistUrl = `https://api.getwaitlist.com/submit/11975`;
+    // Make sure to use the correct waitlist_id as per your GetWaitlist dashboard
+    const waitlistId = 11975; // Your actual waitlist ID
+    const signupData = {
+      email: email,
+      waitlist_id: waitlistId,
+    };
 
     try {
-      const response = await fetch(waitlistUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+      const response = await fetch(
+        "https://api.getwaitlist.com/api/v1/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(signupData),
+        }
+      );
+
+      const data = await response.json(); // Parse the JSON response
 
       if (response.ok) {
         setMessage("Thank you for joining our waiting list!");
       } else {
-        setMessage("An error occurred while submitting the form.");
+        console.error("Response Status:", response.status); // Log the status for debugging
+        console.error("Response Body:", data); // Log the body for more details
+        setMessage(
+          data.message || "An error occurred while submitting the form."
+        ); // Display the API's error message if available
       }
     } catch (error) {
+      console.error("Error:", error);
       setMessage("An error occurred while submitting the form.");
     }
   };
