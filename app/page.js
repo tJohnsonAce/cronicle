@@ -4,27 +4,30 @@ import { useState } from "react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setMessage(""); // Reset message
 
-    // Replace this URL with your GetWaitlist endpoint
-    const waitlistUrl = "https://api.getwaitlist.com/submit/{11975}";
+    const waitlistUrl = `https://api.getwaitlist.com/submit/11975`;
 
-    const response = await fetch(waitlistUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
+    try {
+      const response = await fetch(waitlistUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
 
-    if (response.ok) {
-      // Handle successful submission
-      console.log("Thank you for joining our waiting list!");
-    } else {
-      // Handle error
-      console.error("An error occurred while submitting the form");
+      if (response.ok) {
+        setMessage("Thank you for joining our waiting list!");
+      } else {
+        setMessage("An error occurred while submitting the form.");
+      }
+    } catch (error) {
+      setMessage("An error occurred while submitting the form.");
     }
   };
 
@@ -39,12 +42,14 @@ export default function Home() {
           Discover the future of blockchain-based blogging.
         </p>
 
+        {message && <p className="text-red-500">{message}</p>}
+
         <div className="mt-6">
           <form onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Your Email"
-              className="p-3 rounded-md border-2 border-gray-300 text-black" // Added text-black here
+              className="p-3 rounded-md border-2 border-gray-300 text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
