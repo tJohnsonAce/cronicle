@@ -6,7 +6,7 @@ import heroBackground from "../public/cronicleBG-min.png"; // Replace with the a
 export default function HeroSection() {
   return (
     <div
-      className="relative h-screen flex flex-col justify-center"
+      className="relative flex justify-center lg:justify-start h-screen flex-col"
       style={{ fontFamily: "Roboto, sans-serif", height: "60vh" }}
     >
       {/* The hero image */}
@@ -26,14 +26,14 @@ export default function HeroSection() {
         }}
       ></div>
       {/* Hero text and buttons container */}
-      <div className="z-10 absolute bottom-0 left-0 px-4 lg:px-10 pb-4 lg:pb-10">
-        <h1 className="text-6xl md:text-8xl text-white font-bold mb-4">
+      <div className="z-10 absolute bottom-0 lg:left-0 px-4 lg:px-10 pb-4 lg:pb-10">
+        <h1 className="text-6xl md:text-8xl text-white font-bold mb-4 text-center lg:text-left">
           Cronicle
         </h1>
-        <p className="text-xl md:text-3xl text-white mb-8">
+        <p className="text-xl md:text-3xl text-white mb-8 text-center lg:text-left">
           Welcome to Cronicle — your blogging platform powered by Solana
         </p>
-        <div className="space-x-4">
+        <div className="flex justify-center lg:justify-start space-x-4">
           <button className="clean-button bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition duration-300">
             Get started
           </button>
