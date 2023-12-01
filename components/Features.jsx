@@ -1,5 +1,6 @@
 import Image from "next/image";
 import featuresBackground from "../public/featuresBG-min.png";
+import React from "react";
 
 const features = [
   {
@@ -34,10 +35,11 @@ const features = [
   },
 ];
 
-export default function FeaturesSection() {
+function FeaturesSectionComponent(props, ref) {
   return (
     <div
-      className="relative flex flex-col justify-center md:h-auto py-10" // Added py-10 for vertical padding
+      ref={ref}
+      className="relative flex flex-col justify-center md:h-auto py-10"
       style={{ fontFamily: "Roboto, sans-serif" }}
     >
       <Image
@@ -83,3 +85,7 @@ export default function FeaturesSection() {
     </div>
   );
 }
+
+const FeaturesSection = React.forwardRef(FeaturesSectionComponent);
+
+export default FeaturesSection;

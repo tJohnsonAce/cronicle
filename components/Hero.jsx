@@ -3,7 +3,7 @@
 import Image from "next/image";
 import heroBackground from "../public/cronicleBG-min.png"; // Replace with the actual path to your hero image
 
-export default function HeroSection() {
+export default function HeroSection({ onLearnMoreClick }) {
   return (
     <div
       className="relative flex justify-center lg:justify-start h-screen flex-col"
@@ -37,7 +37,10 @@ export default function HeroSection() {
           <button className="clean-button bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-orange-600 transition duration-300">
             Get started
           </button>
-          <button className="clean-button bg-transparent border border-white text-white px-6 py-3 rounded-lg font-bold text-lg hover:border-black hover:bg-white hover:text-black transition duration-300">
+          <button
+            onClick={onLearnMoreClick} // Add the click handler here
+            className="clean-button bg-transparent border border-white text-white px-6 py-3 rounded-lg font-bold text-lg hover:border-black hover:bg-white hover:text-black transition duration-300"
+          >
             Learn more
           </button>
         </div>
