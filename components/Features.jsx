@@ -1,6 +1,5 @@
 import Image from "next/image";
 import featuresBackground from "../public/featuresBG-min.png";
-import { FaRocket } from "react-icons/fa";
 
 const features = [
   {
@@ -38,8 +37,8 @@ const features = [
 export default function FeaturesSection() {
   return (
     <div
-      className="relative h-full md:h-auto flex flex-col justify-center"
-      style={{ fontFamily: "Roboto, sans-serif", height: "60vh" }}
+      className="relative flex flex-col justify-center md:h-auto py-10" // Added py-10 for vertical padding
+      style={{ fontFamily: "Roboto, sans-serif" }}
     >
       <Image
         src={featuresBackground}
@@ -58,7 +57,7 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-6 z-10 relative">
         <div className="text-center mb-12">
           <h2
-            className="text-6xl font-bold text-white"
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}
           >
             Key Features of Cronicle
