@@ -44,7 +44,7 @@ h6 {
 }
 
 .feature-container:hover .feature-title {
-  color: orange; /* Changes the title color on hover */
+  color: rgb(51, 153, 153); /* Changes the title color on hover */
 }
 
 .transparent-nav {

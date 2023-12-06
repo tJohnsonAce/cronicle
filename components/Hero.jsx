@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import heroBackground from "../public/cronicleBG_1.webp";
-
 export default function HeroSection({ onLearnMoreClick, onGetUpdatesClick }) {
   return (
     <div
@@ -17,10 +14,8 @@ export default function HeroSection({ onLearnMoreClick, onGetUpdatesClick }) {
             "linear-gradient(to top, rgba(0, 0, 0, 1) 0%, transparent 100%)",
         }}
       ></div>
-      {/* Hero text and buttons container */}
       <div className="z-10 absolute lg:bottom-0 lg:left-0 px-4 lg:px-10 pb-4 lg:pb-10 md:bottom-10 bottom-20">
         {" "}
-        {/* Adjusted bottom values */}
         <h1 className="text-6xl md:text-8xl text-white font-bold mb-4 text-center lg:text-left">
           Cronicle
         </h1>
