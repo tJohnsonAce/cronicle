@@ -13,9 +13,10 @@ const NewsletterSignup = forwardRef((props, ref) => {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Stay Updated!</h2>
           <p className="mb-6 text-lg max-w-md mx-auto">
-            Subscribe to our newsletter to get the latest updates about Cronicle
-            and stay ahead in the world of decentralized blogging.
+            Sign up for our newsletter to receive news and updates about
+            Cronicle&apos;s development and launch.
           </p>
+
           <form
             onSubmit={handleSubmit}
             className="flex justify-center items-center flex-wrap"

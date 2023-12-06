@@ -42,13 +42,7 @@ function FeaturesSectionComponent(props, ref) {
       className="relative flex flex-col justify-center md:h-auto py-10"
       style={{ fontFamily: "Roboto, sans-serif" }}
     >
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)",
-        }}
-      ></div>
+      <div className="absolute inset-0"></div>
       <div className="container mx-auto px-6 z-10 relative">
         <div className="text-center mb-12">
           <h2
