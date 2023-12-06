@@ -2,7 +2,6 @@
 
 import FeaturesSection from "@/components/Features";
 import HeroSection from "@/components/Hero";
-import Nav from "@/components/Nav";
 import NewsletterSignup from "@/components/NewsLetter";
 import React, { useRef } from "react";
 import featuresBackground from "../public/featuresBG-min.webp";
@@ -27,9 +26,9 @@ export default function HomePage() {
         alt="Features Background"
         layout="fill"
         objectFit="cover"
-        quality={100}
+        quality={75}
         className="z-0"
-        unoptimized={true}
+        priority
       />
 
       <div className="relative z-10">
