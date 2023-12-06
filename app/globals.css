@@ -46,3 +46,28 @@ h6 {
 .feature-container:hover .feature-title {
   color: orange; /* Changes the title color on hover */
 }
+
+.transparent-nav {
+  background-color: rgba(0, 0, 0, 0.1); /* 10% opacity black */
+}
+
+.glassy-nav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0; /* Start from the left edge */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  background: white;
+  transform: translateX(-100%); /* Hide off-screen initially */
+  transition: transform 0.3s ease-in-out;
+  z-index: 60; /* Ensure it's above other elements */
+}
+
+.mobile-menu.open {
+  transform: translateX(0); /* Slide in */
+}

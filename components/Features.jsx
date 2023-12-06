@@ -42,13 +42,6 @@ function FeaturesSectionComponent(props, ref) {
       className="relative flex flex-col justify-center md:h-auto py-10"
       style={{ fontFamily: "Roboto, sans-serif" }}
     >
-      <Image
-        src={featuresBackground}
-        alt="Jupiter Space Station"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
       <div
         className="absolute inset-0"
         style={{

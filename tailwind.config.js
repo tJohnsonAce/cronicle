@@ -15,6 +15,9 @@ module.exports = {
       boxShadow: {
         neon: "0 0 15px 5px rgba(255, 165, 0, 0.6)",
       },
+      colors: {
+        "transparent-black": "rgba(0, 0, 0, 0.8)",
+      },
     },
   },
   plugins: [],
