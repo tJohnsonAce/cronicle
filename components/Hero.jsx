@@ -6,7 +6,7 @@ export default function HeroSection({ onLearnMoreClick, onGetUpdatesClick }) {
       className="relative z-10 flex justify-center lg:justify-start h-screen flex-col"
       style={{ fontFamily: "Roboto, sans-serif", height: "60vh" }}
     >
-      s<div className="absolute inset-0"></div>
+      <div className="absolute inset-0"></div>
       <div className="z-10 absolute lg:bottom-0 lg:left-0 px-4 lg:px-10 pb-4 lg:pb-10 md:bottom-10 bottom-20">
         {" "}
         <h1 className="text-6xl md:text-8xl text-white font-bold mb-4 text-center lg:text-left">

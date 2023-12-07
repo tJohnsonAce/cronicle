@@ -4,8 +4,6 @@ import FeaturesSection from "@/components/Features";
 import HeroSection from "@/components/Hero";
 import NewsletterSignup from "@/components/NewsLetter";
 import React, { useRef } from "react";
-import featuresBackground from "../public/featuresBG-min.webp";
-import Image from "next/image";
 
 export default function HomePage() {
   const featuresRef = useRef(null);
@@ -21,7 +19,7 @@ export default function HomePage() {
 
   return (
     <div className="relative" style={{ fontFamily: "Roboto, sans-serif" }}>
-      {/* Smaller Radial Gradient for Spotlight Effect */}
+      {/* Updated Linear Gradient */}
       <div
         style={{
           position: "absolute",
@@ -30,8 +28,11 @@ export default function HomePage() {
           right: 0,
           bottom: 0,
           zIndex: 5,
+          background: "#000000" /* Fallback for old browsers */,
           background:
-            "radial-gradient(circle at 500% 20%, rgba(255,255,255,0.4) 0%, transparent 20%, rgba(0,0,0,1) 100%)",
+            "-webkit-linear-gradient(to top, #434343, #000000)" /* Chrome 10-25, Safari 5.1-6 */,
+          background:
+            "linear-gradient(to top, #434343, #000000)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
         }}
       ></div>
 
