@@ -1,6 +1,4 @@
-import Image from "next/image";
-import featuresBackground from "../public/featuresBG-min.png";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 const features = [
   {
@@ -29,9 +27,9 @@ const features = [
       "Advanced tools for content creation and analytics for insights into performance.",
   },
   {
-    title: "Interoperability and Ecosystem Integration",
+    title: "Reputation System",
     description:
-      "Compatibility with various platforms and services in the blockchain ecosystem.",
+      "Reward and track content creators and community members for their positive platform contributions.",
   },
 ];
 
@@ -61,7 +59,7 @@ function FeaturesSectionComponent(props, ref) {
               key={index}
               className="feature-container bg-gray-100 bg-opacity-80 rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300"
             >
-              <h3 className="feature-title font-semibold text-xl text-gray-300">
+              <h3 className="feature-title font-semibold text-2xl text-white">
                 {feature.title}
               </h3>
               <p className="text-gray-200 mt-3">{feature.description}</p>

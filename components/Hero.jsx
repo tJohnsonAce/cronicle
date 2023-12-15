@@ -3,22 +3,30 @@
 export default function HeroSection({ onLearnMoreClick, onGetUpdatesClick }) {
   return (
     <div
-      className="relative z-10 flex justify-center lg:justify-start h-screen flex-col"
-      style={{ fontFamily: "Roboto, sans-serif", height: "60vh" }}
+      className="relative z-10 flex justify-center lg:justify-start h-screen flex-col font-roboto"
+      style={{ height: "60vh" }}
     >
       <div className="absolute inset-0"></div>
       <div className="z-10 absolute lg:bottom-0 lg:left-0 px-4 lg:px-10 pb-4 lg:pb-10 md:bottom-10 bottom-20">
-        {" "}
-        <h1 className="text-6xl md:text-8xl text-white font-bold mb-4 text-center lg:text-left">
+        <h1
+          className="text-6xl md:text-8xl font-bold mb-4 text-center lg:text-left text-white"
+          style={{ textShadow: "0px 0px 8px rgba(150, 150, 150, 0.5)" }}
+        >
           Cronicle
         </h1>
-        <p className="text-xl md:text-3xl text-white mb-8 text-center lg:text-left">
+        <p
+          className="text-gray-300 text-xl md:text-3xl mb-8 text-center lg:text-left"
+          style={{ textShadow: "0px 0px 8px rgba(150, 150, 150, 0.5)" }}
+        >
           Welcome to{" "}
           <span
             style={{
-              background: "linear-gradient(to right, #84fab0 0%, #8fd3f4 100%)",
+              background: "linear-gradient(45deg, #3a3fe7, #06daff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              color: "transparent",
+              display: "inline",
             }}
           >
             Cronicle
@@ -28,13 +36,13 @@ export default function HeroSection({ onLearnMoreClick, onGetUpdatesClick }) {
         <div className="flex justify-center lg:justify-start space-x-4">
           <button
             onClick={onGetUpdatesClick}
-            className="clean-button bg-emerald-600 text-black px-6 py-3 rounded-lg font-bold text-lg hover:bg-emerald-800 hover:text-white transition duration-300"
+            className="px-6 py-3 rounded-lg font-bold text-lg transition-colors duration-300 ease-in-out bg-indigo-600 text-white shadow-lg hover:bg-indigo-800"
           >
             Get Updates
           </button>
           <button
             onClick={onLearnMoreClick}
-            className="clean-button bg-transparent border border-white text-white px-6 py-3 rounded-lg font-bold text-lg hover:border-black hover:bg-white hover:text-black transition duration-300"
+            className="clean-button px-6 py-3 rounded-lg font-bold text-lg transition-colors duration-300 ease-in-out text-white border border-white hover:bg-gray-100 hover:text-black"
           >
             Learn more
           </button>
