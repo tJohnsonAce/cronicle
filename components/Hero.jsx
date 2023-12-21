@@ -36,7 +36,7 @@ export default function HeroSection({ onLearnMoreClick, onGetUpdatesClick }) {
         <div className="flex justify-center lg:justify-start space-x-4">
           <button
             onClick={onGetUpdatesClick}
-            className="px-6 py-3 rounded-lg font-bold text-lg transition-colors duration-300 ease-in-out bg-indigo-600 text-white shadow-lg hover:bg-indigo-800"
+            className="px-6 py-3 rounded-lg font-bold text-lg transition-colors duration-300 ease-in-out bg-teal-600 text-white shadow-lg hover:bg-teal-800"
           >
             Get Updates
           </button>
